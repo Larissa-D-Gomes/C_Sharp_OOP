@@ -32,7 +32,9 @@ namespace ProductTag.Entities
         {
             return this.Name + " $ "
                    + TotalPrice().ToString("F2", CultureInfo.InvariantCulture)
-                   + " (Manufacture date: " + this.CustomsFee + ")";
+                   + " (Customs fee: $ "
+                   + this.CustomsFee.ToString("F2", CultureInfo.InvariantCulture) 
+                   + ")";
         }
     }
 }
